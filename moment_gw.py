@@ -540,7 +540,7 @@ class AGW(lib.StreamObject):
             Lpq = _ao2mo.nr_e2(self.with_df._cderi, mo, ijslice, aosym='s2', out=Lpq)
             return Lpq.reshape(naux,nmo,nmo)
         else:
-            logger.warn(self, 'Memory may not be enough!')
+            logger.warn(self, f"Memory may not be enough! Requested {mem_incore+mem_now} MB, available {self.max_memory} MB.")
             raise NotImplementedError
 
 del DEBUG
