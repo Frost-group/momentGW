@@ -1,8 +1,11 @@
 #!/bin/sh
 #PBS -N HedinsPentagram
 #PBS -l walltime=47:58:00
-#PBS -l select=1:ncpus=128:mem=200GB
+#PBS -l select=1:ncpus=128:mem=460GB
 
+echo "Thundercats!"
+
+export OMP_NUM_THREADS=128
 export PYTHONPATH=/rds/general/user/jmf02/home/CODES/momentGW/dyson-compression
 
 . ~/conda_init.sh
@@ -10,7 +13,7 @@ conda activate momentGW
 
 cd /rds/general/user/jmf02/home/CODES/momentGW/momentGW/
 
-python example_from_file.py Y6ethyls_pbe0-pvtz.xyz > Y6ethyls_pbe0-pvtz.stdout
+python example_from_file.py Y6ethyls_pbe0-pvtz.xyz > Y6ethyls_pbe0-pvtz_128_OMP_Threads.stdout
 
-echo "Thundercats!"
+echo "Ho!"
 
