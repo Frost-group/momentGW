@@ -10,7 +10,7 @@ mol = gto.M(
         atom=gto.mole.fromfile(sys.argv[1]),
         basis="cc-pvdz",
         verbose=5,
-        max_memory=55000, # units MB
+        max_memory=195000, # units MB
 )
 
 # MeanField / HartreeFock calculation

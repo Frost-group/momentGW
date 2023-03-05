@@ -8,7 +8,7 @@ export PYTHONPATH=/rds/general/user/jmf02/home/CODES/momentGW/dyson-compression
 . ~/conda_init.sh
 conda activate momentGW
 
-cd /rds/general/user/jmf02/home/CODES/momentGW/
+cd /rds/general/user/jmf02/home/CODES/momentGW/momentGW/
 
 python example_from_file.py Y6ethyls_pbe0-pvtz.xyz > Y6ethyls_pbe0-pvtz.stdout
 
